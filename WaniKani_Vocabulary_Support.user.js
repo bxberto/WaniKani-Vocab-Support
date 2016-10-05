@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        WaniKani Vocabulary Support
-// @namespace   wanikani
-// @description Adds useful links to the vocab pages
+// @namespace   Aru
+// @description Adds useful links to the Vocabulary pages
 // @include     http*.wanikani.com/vocabulary/*
 // @include     http*.wanikani.com/level/*/vocabulary/*
-// @version     1
+// @version     1.0
 // @grant       none
 // ==/UserScript==
 
@@ -19,23 +19,23 @@ info1.appendChild(alc);
 var url2 = 'http://dictionary.goo.ne.jp/srch/en/' + encodeURIComponent(vocab) + '/m1u/';
 var info2 = document.getElementsByClassName('page-list')[0].getElementsByTagName('ul')[0];
 var goo = document.createElement('li');
-goo.innerHTML = '<a target="_alcVocab" href="' + url4 + '">Goo</a>';
+goo.innerHTML = '<a target="_alcVocab" href="' + url2 + '">Goo</a>';
 info2.appendChild(goo);
 
-var url3 = '' + encodeURIComponent(vocab) + '&ref=sa';
+var url3 = 'http://classic.jisho.org/sentences?jap=' + encodeURIComponent(vocab);
 var info3 = document.getElementsByClassName('page-list')[0].getElementsByTagName('ul')[0];
 var jisho = document.createElement('li');
-jisho.innerHTML = '<a target="_alcVocab" href="' + url1 + '">Jisho</a>';
+jisho.innerHTML = '<a target="_alcVocab" href="' + url3 + '">Jisho</a>';
 info3.appendChild(jisho);
 
-var url4 = '' + encodeURIComponent(vocab) + '/m1u/';
+var url4 = 'http://tangorin.com/examples/' + encodeURIComponent(vocab);
 var info4 = document.getElementsByClassName('page-list')[0].getElementsByTagName('ul')[0];
 var tangorin = document.createElement('li');
 tangorin.innerHTML = '<a target="_alcVocab" href="' + url4 + '">Tangorin</a>';
 info4.appendChild(tangorin);
 
-var url5 = '' + encodeURIComponent(vocab) + '&ref=sa';
+var url5 = 'http://ejje.weblio.jp/sentence/content/' + encodeURIComponent(vocab);
 var info5 = document.getElementsByClassName('page-list')[0].getElementsByTagName('ul')[0];
 var weblio = document.createElement('li');
-weblio.innerHTML = '<a target="_alcVocab" href="' + url1 + '">Weblio</a>';
+weblio.innerHTML = '<a target="_alcVocab" href="' + url5 + '">Weblio</a>';
 info5.appendChild(weblio);
